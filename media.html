@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media | Eta Chapter</title>
+    <meta
+      name="description"
+      content="Media page for Eta Chapter of Phi Beta Sigma Fraternity, Inc. Video links and photo slideshow framework."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page media-page">
+      <header>
+        <nav class="navbar">
+          <div class="brand">
+            <div class="brand__mark"><img src="assets/eta-seal.png" alt="Eta Chapter Seal" class="brand__logo"></div>
+            <div class="brand__text">
+              <strong>Eta Chapter</strong>
+              Phi Beta Sigma Fraternity, Inc.
+            </div>
+          </div>
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="lineage.html">Lineage</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="programs.html">Programs</a>
+            <a href="media.html" class="active">Media</a>
+            <a href="legacy.html">Legacy</a>
+            <a href="eta-chapter-officers.html">Officers</a>
+          </div>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div>
+          <p class="section-title">Media</p>
+          <h1 class="hero-title">Watch Eta Chapter in action</h1>
+          <p class="hero-copy">
+            Explore the latest videos from our official YouTube channel and view a photo slideshow framework that is ready for chapter events and memories.
+          </p>
+        </div>
+
+        <div class="panel">
+          <div class="panel-inner">
+            <h2>Video library</h2>
+            <p>
+              These links take you to our official YouTube channel and selected featured videos. More uploads are available on the channel's video page.
+            </p>
+            <div class="video-links">
+              <a class="video-link" href="https://www.youtube.com/watch?v=SBNvdEo5FDQ" target="_blank" rel="noopener noreferrer">
+                <strong>2020 Eta Chapter - Meet The Greeks (Official Video)</strong>
+                Watch on YouTube
+              </a>
+              <a class="video-link" href="https://www.youtube.com/@etachapterofphibetasigmafr3265/videos" target="_blank" rel="noopener noreferrer">
+                <strong>Eta Chapter YouTube channel</strong>
+                View more videos on the channel
+              </a>
+              <a class="video-link" href="https://www.instagram.com/ncatsigmas/" target="_blank" rel="noopener noreferrer">
+                <strong>Eta Chapter on Instagram</strong>
+                Follow us for photos and updates
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">Slideshow framework</div>
+        <h2 class="section-heading">Photo gallery ready for chapter images</h2>
+        <p class="hero-copy">
+          This slideshow area is designed for gallery photos and event images. Replace the placeholder slides with your own pictures to showcase chapter moments.
+        </p>
+
+        <div class="slideshow">
+          <div class="slide active">
+            <div class="slide-placeholder">Photo Slide 1</div>
+            <div class="slide-caption">Placeholder for a chapter event photo.</div>
+          </div>
+          <div class="slide">
+            <div class="slide-placeholder">Photo Slide 2</div>
+            <div class="slide-caption">Placeholder for a second gallery image.</div>
+          </div>
+          <div class="slide">
+            <div class="slide-placeholder">Photo Slide 3</div>
+            <div class="slide-caption">Placeholder for a third event photo.</div>
+          </div>
+        </div>
+        <div class="slideshow-controls">
+          <button type="button" class="btn btn-secondary prev-slide">Previous</button>
+          <button type="button" class="btn btn-primary next-slide">Next</button>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div>Eta Chapter • Phi Beta Sigma Fraternity, Inc. • North Carolina A&T State University • Greensboro, NC</div>
+        <div class="footer-links">
+          <a href="https://www.phibetasigma1914.org/">National Website</a>
+          <a href="https://www.ncat.edu/">NC A&T Website</a>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const slides = Array.from(document.querySelectorAll('.slide'));
+        let currentIndex = 0;
+
+        const updateSlides = () => {
+          slides.forEach((slide, index) => {
+            slide.classList.toggle('active', index === currentIndex);
+          });
+        };
+
+        document.querySelector('.prev-slide').addEventListener('click', () => {
+          currentIndex = (currentIndex + slides.length - 1) % slides.length;
+          updateSlides();
+        });
+
+        document.querySelector('.next-slide').addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % slides.length;
+          updateSlides();
+        });
+      });
+    </script>
+  </body>
+</html>
