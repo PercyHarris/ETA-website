@@ -709,6 +709,46 @@ header {
   }
 }
 
+/* Officers headshots row */
+.officers-headshots-section {
+  padding-top: 12px;
+}
+.officers-headshots {
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  align-items: center;
+  margin: 18px 0 28px;
+}
+.officer {
+  text-align: center;
+}
+.officer img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  display: block;
+}
+.officer figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .officers-headshots {
+    gap: 18px;
+    padding: 0 12px;
+  }
+  .officer img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
 @media (max-width: 640px) {
   .page {
     padding: 0 18px 50px;
